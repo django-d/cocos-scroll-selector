@@ -9,7 +9,7 @@ export default class Item extends cc.Component {
     label: cc.Label = null;
 
     updateData(data, index) {
-        if (!index) this.node.active = false;
+        if (data.hide) this.node.active = false;
         else this.node.active = true;
         this.index = index;
         this.label.string = `${index}`;
